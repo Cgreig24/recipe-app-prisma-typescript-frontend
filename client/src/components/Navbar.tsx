@@ -1,4 +1,4 @@
-import { NavLink, Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../context/auth.context.tsx";
 
@@ -7,14 +7,6 @@ export default function Navbar() {
 
   const location = useLocation();
 
-  const navLinks = [
-    { id: 1, to: "/", label: "Home" },
-    { id: 2, to: "/your-recipes", label: "Your Recipes" },
-    { id: 3, to: "/recipes", label: "Recipes" },
-    { id: 4, to: "/login", label: "Log In" },
-    { id: 5, to: "/signup", label: "Sign Up" },
-    { id: 6, to: "/profile", label: "User Profile" },
-  ];
   return (
     <>
       <div className="navbar bg-accent fixed top-0 left-0 right-0 z-50">

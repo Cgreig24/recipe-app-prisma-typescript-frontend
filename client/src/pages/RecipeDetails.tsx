@@ -19,7 +19,7 @@ const RecipeFetcher: React.FC = () => {
   const { recipeid } = useParams<{ recipeid: string }>();
   const [recipeFetch, setRecipeFetch] = useState<Recipe | null>(null);
   const { user } = useContext(AuthContext);
-  const userId = user?.id;
+  // const userId = user?.id;
 
   const navigate = useNavigate();
 

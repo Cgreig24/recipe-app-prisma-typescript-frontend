@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import homepageImage from "../assets/recipe-homepage.jpg";
-import axios from "axios";
 
 function Homepage() {
   const navigate = useNavigate();
