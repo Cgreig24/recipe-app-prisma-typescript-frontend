@@ -12,26 +12,26 @@ interface UserProfile {
   dateCreated: string;
 }
 
-interface AuthContextType {
-  data: { id: string; username: string; email: string };
-}
+//interface AuthContextType {
+//  data: { id: string; username: string; email: string };
+//}
 
 const API_URL = import.meta.env.VITE_API_URL;
 
 function UserProfilePage() {
   const [userProfile, setUserProfile] = useState<UserProfile | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
+  // const [loading, setLoading] = useState<boolean>(true);
   const { user } = useContext(AuthContext);
   //const { userid } = useParams();
 
-  const [errorMessage, setErrorMessage] = useState<string | undefined>(
-    undefined
-  );
+  //const [errorMessage, setErrorMessage] = useState<string | undefined>(
+  // undefined
+  // );
 
   useEffect(() => {
     const getUser = async () => {
       if (!user) {
-        setErrorMessage("User not logged in");
+        // setErrorMessage("User not logged in");
         return;
       }
 
@@ -40,7 +40,7 @@ function UserProfilePage() {
       console.log(user);
 
       if (!storedToken) {
-        setErrorMessage("No token found");
+        // setErrorMessage("No token found");
         return;
       }
 
@@ -56,10 +56,10 @@ function UserProfilePage() {
         setUserProfile(response.data);
       } catch (error) {
         console.error(error);
-        setErrorMessage("Failed to load user profile");
-      } finally {
-        setLoading(false);
-      }
+        //  setErrorMessage("Failed to load user profile");
+      } //finally {
+      //  setLoading(false);
+      //  }
     };
 
     getUser();

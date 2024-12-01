@@ -24,8 +24,8 @@ interface YourRecipe {
 const YourRecipes: React.FC = () => {
   const { user } = useContext(AuthContext);
   const [yourRecipeFetch, setYourRecipeFetch] = useState<YourRecipe[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
+  //const [loading, setLoading] = useState(true);
+  // const [error, setError] = useState("");
   const navigate = useNavigate();
   //const { recipeid } = useParams();
 
@@ -42,18 +42,18 @@ const YourRecipes: React.FC = () => {
       setYourRecipeFetch(response.data.data);
     } catch (error) {
       console.error("Error fetching recipe:", error);
-      setError("Failed to load your recipes");
-    } finally {
-      setLoading(false);
-    }
+      // setError("Failed to load your recipes");
+    } //finally {
+    //   setLoading(false);
+    //  }
   };
 
   useEffect(() => {
     if (user) {
       fetchYourRecipe();
     } else {
-      setError("User not authenticated");
-      setLoading(false);
+      //   setError("User not authenticated");
+      //  setLoading(false);
     }
   }, [user]);
 
