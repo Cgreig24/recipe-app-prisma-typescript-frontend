@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from "react";
-import reactLogo from "./assets/react.svg";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
@@ -10,6 +8,7 @@ import UserProfilePage from "./pages/UserProfilePage";
 import RecipesPage from "./pages/RecipesPage";
 import RecipeDetails from "./pages/RecipeDetails";
 import YourRecipes from "./pages/YourRecipes";
+
 import YourRecipeDetails from "./pages/YourRecipesDetails";
 
 function App() {
