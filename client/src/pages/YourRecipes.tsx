@@ -24,8 +24,8 @@ interface YourRecipe {
 const YourRecipes: React.FC = () => {
   const { user } = useContext(AuthContext);
   const [yourRecipeFetch, setYourRecipeFetch] = useState<YourRecipe[]>([]);
-  //const [loading, setLoading] = useState(true);
-  // const [error, setError] = useState("");
+  const [_loading, _setLoading] = useState(true);
+  const [_error, _setError] = useState("");
   const navigate = useNavigate();
   //const { recipeid } = useParams();
 
