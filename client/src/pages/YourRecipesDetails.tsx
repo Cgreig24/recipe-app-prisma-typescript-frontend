@@ -25,8 +25,8 @@ const YourRecipeDetails: React.FC = () => {
   const { recipeid } = useParams<{ recipeid: string }>();
   const [yourRecipeFetchDetails, setYourRecipeFetchDetails] =
     useState<YourRecipeDetails | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
+  const [_loading, setLoading] = useState(true);
+  const [_error, setError] = useState("");
   const [notes, setNotes] = useState("");
   const [newIngredient, setNewIngredient] = useState("");
   const [ingredientToEdit, setIngredientToEdit] = useState<string | null>(null);
