@@ -65,11 +65,11 @@ const RecipeFetcher: React.FC = () => {
   }, [recipeid]);
 
   return (
-    <div className="p-6">
+    <div className="p-6 bg-base-200 w-full pt-20 mx-auto">
       {recipeFetch ? (
-        <div className="prose">
+        <div>
           {/* Recipe Title */}
-          <h2 className="text-4xl text-primary font-bold mb-4 text-transform: capitalize">
+          <h2 className="text-4xl text-primary font-bold mb-4 capitalize">
             {recipeFetch.title}
           </h2>
 
@@ -77,39 +77,42 @@ const RecipeFetcher: React.FC = () => {
           <img
             src={recipeFetch.image}
             alt={recipeFetch.title}
-            className="w-64 h-64 border-4 border-neutral rounded-xl mb-4"
+            className="w-full max-w-md h-auto border-4 border-neutral rounded-xl mx-auto mt-4"
           />
 
           {/* Recipe Info */}
-          <div className="flex gap-4 mb-4">
+          <div className="justify-center gap-4 my-4">
             {recipeFetch.servings && (
-              <span className="badge badge-success p-3">
+              <span className="badge badge-success p-3 capitalize">
                 Serves: {recipeFetch.servings}
               </span>
             )}
             {recipeFetch.dishType && (
-              <span className="badge badge-primary p-3">
+              <span className="badge badge-primary p-3 capitalize">
                 Course: {recipeFetch.dishType}
               </span>
             )}
             {recipeFetch.cuisineType && (
-              <span className="badge badge-accent p-3">
+              <span className="badge badge-accent p-3 capitalize">
                 Cuisine: {recipeFetch.cuisineType}
               </span>
             )}
             {recipeFetch.totalTime && (
-              <span className="badge badge-warning p-3">
+              <span className="badge badge-warning p-3 capitalize">
                 Time: {recipeFetch.totalTime}
               </span>
             )}
           </div>
 
           {/* Ingredients */}
-          <div className="p-4">
+          <div className="p-4 max-w-2xl mx-auto">
             <h3 className="text-xl font-semibold mb-2">Ingredients</h3>
             <ul className="list-inside">
               {recipeFetch.ingredients.map((ingredient, index) => (
-                <li key={index} className="py-1">
+                <li
+                  key={index}
+                  className="flex justify-between items-center py-2"
+                >
                   {ingredient}
                 </li>
               ))}
@@ -135,7 +138,7 @@ const RecipeFetcher: React.FC = () => {
           </div>
 
           {/* Buttons */}
-          <div className="flex gap-4 mt-6">
+          <div className="flex justify-center gap-4 mt-6">
             <button
               className="btn btn-neutral"
               onClick={() => {

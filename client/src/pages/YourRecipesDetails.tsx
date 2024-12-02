@@ -194,7 +194,7 @@ const YourRecipeDetails: React.FC = () => {
     <>
       {yourRecipeFetchDetails ? (
         <div className=" p-6 bg-base-200 w-full pt-20 mx-auto">
-          <h2 className="text-4xl text-primary font-bold text-transform: capitalize">
+          <h2 className="text-4xl text-primary font-bold capitalize">
             {yourRecipeFetchDetails.title}
           </h2>
           <img
@@ -204,9 +204,9 @@ const YourRecipeDetails: React.FC = () => {
               target.src = cartoonFood;
             }}
             // className="w-64 h-64 border-4 border-neutral rounded-xl"
-            className="w-full max-w-md h-auto border-4 border-neutral rounded-xl mx-auto"
+            className="w-full max-w-md h-auto border-4 border-neutral rounded-xl mx-auto mt-4"
           />
-          <div className="flex gap-4 my-4">
+          <div className="flex justify-center gap-4 my-4">
             {yourRecipeFetchDetails.dishType && (
               <span className="badge badge-primary capitalize p-3">
                 {yourRecipeFetchDetails.dishType}
@@ -229,7 +229,7 @@ const YourRecipeDetails: React.FC = () => {
               </span>
             )}
           </div>
-          <div className="p-4">
+          <div className="p-4 max-w-2xl mx-auto">
             <h3 className="text-xl font-semibold">Ingredients</h3>
             <button className="btn btn-link text-sm">Edit Ingredients</button>
             <ul className="list-inside">
@@ -343,7 +343,7 @@ const YourRecipeDetails: React.FC = () => {
               </button>
             </div>
           </div>
-          <div className="flex gap-4 mt-6">
+          <div className="flex justify-center gap-4 mt-6">
             <button className="btn btn-primary" onClick={handleDelete}>
               Remove from Recipe Book
             </button>
