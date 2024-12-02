@@ -9,7 +9,7 @@ function Homepage() {
   };
 
   return (
-    <div className="hero bg-base-200 min-h-screen">
+    <div className="hero bg-base-200 min-h-screen w-full">
       <div className="hero-content flex-col lg:flex-row pt-10">
         <img src={homepageImage} className="max-w-sm rounded-lg shadow-2xl" />
         <div>
