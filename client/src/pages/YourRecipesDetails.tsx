@@ -193,7 +193,7 @@ const YourRecipeDetails: React.FC = () => {
   return (
     <>
       {yourRecipeFetchDetails ? (
-        <div className="prose p-6 bg-base-200 w-full">
+        <div className=" p-6 bg-base-200 w-full pt-20 mx-auto">
           <h2 className="text-4xl text-primary font-bold text-transform: capitalize">
             {yourRecipeFetchDetails.title}
           </h2>
@@ -203,7 +203,8 @@ const YourRecipeDetails: React.FC = () => {
               const target = e.target as HTMLImageElement;
               target.src = cartoonFood;
             }}
-            className="w-64 h-64 border-4 border-neutral rounded-xl"
+            // className="w-64 h-64 border-4 border-neutral rounded-xl"
+            className="w-full max-w-md h-auto border-4 border-neutral rounded-xl mx-auto"
           />
           <div className="flex gap-4 my-4">
             {yourRecipeFetchDetails.dishType && (
